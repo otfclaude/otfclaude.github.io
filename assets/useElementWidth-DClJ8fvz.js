@@ -1,0 +1,1 @@
+import{b as t}from"./motion--Dao8SgC.js";function i(){const n=t.useRef(null),[s,r]=t.useState(0);return t.useLayoutEffect(()=>{const e=n.current;if(!e)return;r(Math.round(e.getBoundingClientRect().width));const o=new ResizeObserver(([u])=>r(Math.round(u.contentRect.width)));return o.observe(e),()=>o.disconnect()},[]),[n,s]}export{i as u};

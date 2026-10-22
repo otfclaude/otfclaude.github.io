@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="OTF BANDZ" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="OTF BANDZ — a calm, month-by-month personal budget." />
+    <meta name="theme-color" content="#F7F6F3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0F0F0E" media="(prefers-color-scheme: dark)" />
+    <title>OTF BANDZ</title>
+    <!-- Start fetching both self-hosted fonts straight away (the serif for titles and amounts, the sans for the rest) -->
+    <link rel="preload" href="/fonts/Newsreader-Variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Manrope-Variable.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      // Apply the saved theme before the page paints, so there is no flash,
+      // and match the phone's browser bar to it (colours mirror --bg in tokens.css).
+      try {
+        var t = localStorage.getItem('otf-theme');
+        if (t === 'light' || t === 'dark') {
+          document.documentElement.dataset.theme = t;
+          var bar = t === 'dark' ? '#0F0F0E' : '#F7F6F3';
+          document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
+            m.content = bar;
+          });
+        }
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="/assets/index-BW_yXg0l.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/motion--Dao8SgC.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-DYSpR_MN.js">
+    <link rel="modulepreload" crossorigin href="/assets/dexie-BxMreSdr.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-e0tpEsvk.css">
+  <link rel="manifest" href="/manifest.webmanifest"></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
